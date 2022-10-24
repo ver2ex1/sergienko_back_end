@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 const start = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://ver2ex:2GQmOpzoInnQP5zi@cluster0.20klivg.mongodb.net/sergienko?retryWrites=true&w=majority`,
+      `mongodb+srv://ver2ex:2GQmOpzoInnQP5zi@cluster0.20klivg.mongodb.net/?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
