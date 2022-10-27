@@ -8,6 +8,7 @@ class imageController {
         _id: new mongoose.Types.ObjectId(),
         image: req.file.path,
         description: req.body.description,
+        type: req.body.type,
       });
       image.save();
       return res.json({ message: "Image was succesfully added" });
