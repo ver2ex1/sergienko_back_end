@@ -39,7 +39,7 @@ router.post(
   [imageMiddleware, upload.single("image")],
   controller.createImage
 );
-router.get("", imageMiddleware, controller.getImage);
+router.get("", controller.getImage);
 router.delete("/:id", imageMiddleware, controller.deleteImage);
 
 module.exports = router;
