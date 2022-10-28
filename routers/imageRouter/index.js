@@ -18,6 +18,6 @@ router.post(
   controller.createImage
 );
 router.get("", controller.getImage);
-router.delete("/:id", imageMiddleware, controller.deleteImage);
+router.delete("/:id/:imageName", imageMiddleware, controller.deleteImage);
 
 module.exports = router;

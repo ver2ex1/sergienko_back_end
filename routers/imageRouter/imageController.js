@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Image = require("../../models/Image");
+const cloudinary = require("cloudinary").v2;
 
 class imageController {
   async createImage(req, res) {
@@ -29,6 +30,12 @@ class imageController {
 
   async deleteImage(req, res) {
     try {
+      cloudinary.uploader.destroy(
+        req.params.imageName,
+        function (error, result) {
+          console.log(result, error);
+        }
+      );
       await Image.findByIdAndDelete(req.params.id);
       return res.json({ message: "Image succesfully deleted" });
     } catch (e) {
