@@ -31,7 +31,7 @@ class imageController {
   async deleteImage(req, res) {
     try {
       cloudinary.uploader.destroy(
-        req.params.imageName,
+        `sergiienko/${req.params.imageName}`,
         function (error, result) {
           console.log(result, error);
         }
