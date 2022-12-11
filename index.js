@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const authRouter = require("./routers/authRouter");
 const imageRouter = require("./routers/imageRouter");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(express.json());
